@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "slug": "native-garden-transformation",
+    "title": "Native Garden Transformation",
+    "content": "A complete backyard transformation using native New Zealand plants to create a lush, sustainable retreat.",
+    "image": "/img/project1.jpg",
+    "projectType": "landscaping"
+  },
+  {
+    "id": 2,
+    "slug": "seasonal-hedge-maintenance",
+    "title": "Seasonal Hedge Maintenance",
+    "content": "Precision hedge trimming and shaping to maintain a clean and structured outdoor space.",
+    "image": "/img/project2.jpg",
+    "projectType": "hedges"
+  },
+  {
+    "id": 3,
+    "slug": "full-section-clearing",
+    "title": "Full Section Clearing",
+    "content": "Large-scale clearing project to prepare land for redevelopment and fresh landscaping.",
+    "image": "/img/project3.jpg",
+    "projectType": "section-clearing"
+  }
+]

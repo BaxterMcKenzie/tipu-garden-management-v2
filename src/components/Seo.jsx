@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async";
+
 
 const Seo = ({ title, description, image, url, twitterCard = "summary_large_image"}) => {
   return (

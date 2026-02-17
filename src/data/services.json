@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Garden Maintenance",
+    "description": "Regular lawn care, pruning, edging and upkeep.",
+    "image": "/img/services/garden-maintenance.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Hedge Trimming",
+    "description": "Professional hedge shaping and trimming.",
+    "image": "/img/services/hedge-trimming.jpg"
+  }
+]

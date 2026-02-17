@@ -8,22 +8,15 @@ const TestimonialSwiper = ({ testimonials }) => {
   const swiperRef = useRef(null);
 
   const handleMouseEnter = () => {
-    if (swiperRef.current && swiperRef.current.autoplay) {
+    if (swiperRef.current?.autoplay) {
       swiperRef.current.autoplay.stop();
     }
   };
 
   const handleMouseLeave = () => {
-    if (swiperRef.current && swiperRef.current.autoplay) {
+    if (swiperRef.current?.autoplay) {
       swiperRef.current.autoplay.start();
     }
-  };
-
-  const getFeaturedImage = (testimonial) => {
-    return (
-      testimonial?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-      "https://via.placeholder.com/150"
-    );
   };
 
   return (
@@ -32,7 +25,6 @@ const TestimonialSwiper = ({ testimonials }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Swiper Navigation Buttons */}
       <button className="secondary-button swiper-button-prev"></button>
       <button className="secondary-button swiper-button-next"></button>
 
@@ -53,27 +45,33 @@ const TestimonialSwiper = ({ testimonials }) => {
         }}
         speed={1000}
       >
-        {/* Conditional Rendering of Slides */}
         {testimonials && testimonials.length > 0 ? (
-          testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id}>
-  <div className="testimonial-slide">
-    <img
-      src={getFeaturedImage(testimonial)}
-      alt={testimonial.title.rendered}
-      className="testimonial-image"
-    />
-    <h4 className="testimonial-author">
-      {testimonial.title.rendered}
-    </h4>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: testimonial.content.rendered,
-      }}
-      className="testimonial-content"
-    />
-  </div>
-</SwiperSlide>
+          testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <div className="testimonial-slide">
+                {testimonial.image && (
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="testimonial-image"
+                  />
+                )}
+
+                <h4 className="testimonial-author">
+                  {testimonial.name}
+                </h4>
+
+                {testimonial.location && (
+                  <p className="testimonial-location">
+                    {testimonial.location}
+                  </p>
+                )}
+
+                <p className="testimonial-content">
+                  {testimonial.quote}
+                </p>
+              </div>
+            </SwiperSlide>
           ))
         ) : (
           <SwiperSlide>

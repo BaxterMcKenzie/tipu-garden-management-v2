@@ -1,34 +1,24 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
 
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Links from "./components/Links";
 
-import useCustomizer from "./hooks/useCustomizer";
-import LoadingSpinner from "./components/LoadingSpinner";
-
 const App = () => {
-  const { bgColor, fontFamily, navColor } = useCustomizer();
-
-  const isCustomizerLoaded = bgColor && fontFamily && navColor;
-
   return (
-    <>
+    <HelmetProvider>
       <HashRouter>
-        {isCustomizerLoaded ? (
-          <div className='custom-style' style={{ backgroundColor: `#${bgColor}`, fontFamily: fontFamily, gridRow: '2'}}>
-            <ScrollToTop/>
-            <Navbar style={{ backgroundColor: navColor }} />
-            <Links />
-            <Footer />
-          </div>
-        ) : (
-          <LoadingSpinner />
-        )}
+        <div className="custom-style">
+          <ScrollToTop />
+          <Navbar />
+          <Links />
+          <Footer />
+        </div>
       </HashRouter>
-    </>
+    </HelmetProvider>
   );
 };
 

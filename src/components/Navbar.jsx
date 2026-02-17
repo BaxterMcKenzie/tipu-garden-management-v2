@@ -1,16 +1,8 @@
-import { useState, useEffect, useContext } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import useCustomizer from "../hooks/useCustomizer";
-import axios from "axios";
-import { CartContext } from "../context/CartContext";
-
-const baseUrl = import.meta.env.VITE_WP_BASE_URL;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [logoUrl, setLogoUrl] = useState("");
-  const { mobileMenu, navColor, fontFamily, primaryButtonColor, secondaryButtonColor } = useCustomizer(); // Include fontFamily and button colors
-  const { cart } = useContext(CartContext);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,146 +14,95 @@ const Navbar = () => {
     document.body.style.overflow = "auto";
   };
 
-  useEffect(() => {
-    const mobile = document.querySelector(".nav-links");
-    const rootStyles = getComputedStyle(document.documentElement);
-    const defaultColor = rootStyles.getPropertyValue("--default-bg-color").trim();
-
-    if (isOpen && mobile) {
-      mobile.style.backgroundColor = mobileMenu;
-    } else if (mobile) {
-      mobile.style.backgroundColor = defaultColor;
-    }
-  }, [isOpen, mobileMenu]);
-
-  useEffect(() => {
-    const fetchNavLogo = async () => {
-      try {
-        const response = await axios.get(`${baseUrl}custom/v1/nav-logo`);
-        if (response.status === 200) {
-          setLogoUrl(response.data.url);
-        } else {
-        }
-      } catch (error) {
-      }
-    };
-
-    fetchNavLogo();
-  }, []);
-
-  useEffect(() => {
-    if (fontFamily) {
-      document.body.style.fontFamily = fontFamily;
-    }
-  }, [fontFamily]);
-
-  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-
-  // Dynamically update button color variables
-  useEffect(() => {
-    if (primaryButtonColor && secondaryButtonColor) {
-      document.documentElement.style.setProperty('--primary-button-color', primaryButtonColor);
-      document.documentElement.style.setProperty('--secondary-button-color', secondaryButtonColor);
-    }
-  }, [primaryButtonColor, secondaryButtonColor]);
+  const getNavClass = ({ isActive }) =>
+    isActive ? "active-link" : "";
 
   return (
     <header>
-      <nav
-        className={`navbar ${isOpen ? "menu-open" : ""}`}
-        style={{ backgroundColor: navColor }}
-      >
-        <NavLink to="/" className="logo">
+      <nav className={`navbar ${isOpen ? "menu-open" : ""}`}>
+        
+        {/* Logo */}
+        <NavLink to="/" end className="logo" onClick={closeMenu}>
           <img
             className="nav-logo"
-            src={logoUrl || "img/tipu-logo-dark-background.svg"}
+            src="/img/tipu-logo-dark-background.svg"
             alt="Website Logo"
           />
         </NavLink>
+
+        {/* Mobile Icon */}
         <div className="menu-icon" onClick={toggleMenu}>
           <div className={`bar bar1 ${isOpen ? "toggle" : ""}`}></div>
           <div className={`bar bar2 ${isOpen ? "toggle" : ""}`}></div>
           <div className={`bar bar3 ${isOpen ? "toggle" : ""}`}></div>
         </div>
+
+        {/* Nav Links */}
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           <li>
             <NavLink
               to="/"
+              end
               onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
+              className={getNavClass}
             >
-              <span className="text">Home</span>
+              Home
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to="/services"
               onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
+              className={getNavClass}
             >
-              <span className="text">Services</span>
+              Services
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to="/ourWork"
               onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
+              className={getNavClass}
             >
-              <span className="text">Our Work</span>
+              Our Work
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to="/reviews"
               onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
+              className={getNavClass}
             >
-              <span className="text">Reviews</span>
+              Reviews
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/shop"
-              onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              <span className="text">Shop</span>
-            </NavLink>
-          </li>
-          <li className="cart-number">
-            <NavLink
-              to="/cart"
-              onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              <span className="text">Cart</span>
-              {totalItems > 0 && (
-                <span className="cart-span">{totalItems}</span>
-              )}
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               to="/about"
               onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
+              className={getNavClass}
             >
-              <span className="text">About</span>
+              About
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to="/contact"
               onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
+              className={getNavClass}
             >
-              <span className="text">Contact</span>
+              Contact
             </NavLink>
           </li>
         </ul>
       </nav>
 
+      {/* Overlay */}
       {isOpen && <div className="overlay" onClick={closeMenu}></div>}
     </header>
   );
