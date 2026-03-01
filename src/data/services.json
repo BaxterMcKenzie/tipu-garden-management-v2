@@ -2,13 +2,25 @@
   {
     "id": 1,
     "title": "Garden Maintenance",
-    "description": "Regular lawn care, pruning, edging and upkeep.",
+    "description": "Our comprehensive garden maintenance service keeps your outdoor spaces healthy, tidy, and thriving all year round. We take care of mowing, edging, pruning, trimming, weeding, fertilising, mulching, and seasonal clean-ups to ensure your garden always looks its best. Whether you need regular scheduled visits or occasional tidy-ups, we tailor our service to suit your garden’s unique needs and the changing seasons. With attention to detail and genuine care for every property, we help your garden flourish while saving you time and effort.",
     "image": "/img/services/garden-maintenance.jpg"
   },
   {
     "id": 2,
     "title": "Hedge Trimming",
-    "description": "Professional hedge shaping and trimming.",
+    "description": "Well-maintained hedges enhance privacy, structure, and overall curb appeal. Our professional hedge trimming and shaping service ensures clean lines, balanced growth, and long-term plant health. From decorative topiaries to large boundary hedges, we carefully trim and shape each hedge to maintain its form and encourage healthy growth. We work efficiently and safely, leaving your property neat and your hedges looking sharp, structured, and beautifully maintained.",
     "image": "/img/services/hedge-trimming.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Lawn Care",
+    "description": "A lush, green lawn forms the foundation of any beautiful garden. Our lawn care services include regular mowing, edging, fertilising, weed control, and seasonal treatments designed to promote strong, healthy growth. We understand that every lawn is different, so we adjust our approach depending on soil condition, weather patterns, and grass type. Whether you’re looking for routine maintenance or a lawn revival, we’ll help create a vibrant, well-kept space you can enjoy year-round.",
+    "image": "/img/services/lawn-care.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Section Clearing",
+    "description": "Overgrown sections can quickly become overwhelming, but we’re here to restore order and usability to your outdoor space. Our section clearing service includes removing long grass, invasive weeds, unwanted vegetation, and green waste. Whether you’re preparing for landscaping, reclaiming neglected areas, or simply wanting a fresh start, we work efficiently to clear and tidy your section. We take care to leave your property safe, manageable, and ready for its next stage of transformation.",
+    "image": "/img/services/section-clearing.jpg"
   }
 ]

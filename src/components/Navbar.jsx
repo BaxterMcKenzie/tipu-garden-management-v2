@@ -39,70 +39,40 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
+          
           <li>
-            <NavLink
-              to="/"
-              end
-              onClick={closeMenu}
-              className={getNavClass}
-            >
-              Home
+            <NavLink to="/" end onClick={closeMenu} className={getNavClass}>
+              <span className="text">Home</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink
-              to="/services"
-              onClick={closeMenu}
-              className={getNavClass}
-            >
-              Services
+            <NavLink to="/services" onClick={closeMenu} className={getNavClass}>
+              <span className="text">Services</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink
-              to="/ourWork"
-              onClick={closeMenu}
-              className={getNavClass}
-            >
-              Our Work
+            <NavLink to="/ourWork" onClick={closeMenu} className={getNavClass}>
+              <span className="text">Our Work</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink
-              to="/reviews"
-              onClick={closeMenu}
-              className={getNavClass}
-            >
-              Reviews
+            <NavLink to="/about" onClick={closeMenu} className={getNavClass}>
+              <span className="text">About</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink
-              to="/about"
-              onClick={closeMenu}
-              className={getNavClass}
-            >
-              About
+            <NavLink to="/contact" onClick={closeMenu} className={getNavClass}>
+              <span className="text">Contact</span>
             </NavLink>
           </li>
 
-          <li>
-            <NavLink
-              to="/contact"
-              onClick={closeMenu}
-              className={getNavClass}
-            >
-              Contact
-            </NavLink>
-          </li>
         </ul>
       </nav>
 
-      {/* Overlay */}
       {isOpen && <div className="overlay" onClick={closeMenu}></div>}
     </header>
   );

@@ -6,8 +6,14 @@
     "image": "/img/testimonials/sarah.jpg"
   },
   {
-    "name": "James Patel",
-    "quote": "Our garden has never looked better. Highly recommend.",
-    "location": "Lower Hutt"
+    "name": "Sarah Thompson",
+    "quote": "Tipu completely transformed our backyard. Professional and reliable.",
+    "location": "Wellington",
+    "image": "/img/testimonials/sarah.jpg"
+  },  {
+    "name": "Sarah Thompson",
+    "quote": "Tipu completely transformed our backyard. Professional and reliable.",
+    "location": "Wellington",
+    "image": "/img/testimonials/sarah.jpg"
   }
 ]

@@ -1,11 +1,14 @@
 [
   {
     "id": 1,
-    "title": "Residential Garden Upgrade",
-    "description": "Full backyard transformation.",
-    "images": [
-      "/img/work/project1-1.jpg",
-      "/img/work/project1-2.jpg"
-    ]
+    "title": "Complete Garden Transformation",
+    "description": "This full garden transformation involved clearing overgrown areas, reshaping garden beds, installing fresh mulch, and planting a selection of hardy native species suited to the local climate. The result was a clean, structured outdoor space that balances beauty with low-maintenance practicality. The client wanted a relaxing retreat that felt natural yet tidy—and the final result delivered exactly that.",
+    "image": "/img/our-work/garden-transformation.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Hedge Restoration Project",
+    "description": "This project focused on restoring a series of overgrown boundary hedges that had become uneven and difficult to manage. We carefully reshaped each hedge, removing dead growth and encouraging healthy regrowth. The transformation significantly improved the property's street appeal while restoring privacy and structure to the garden.",
+    "image": "/img/our-work/hedge-restoration.jpg"
   }
 ]

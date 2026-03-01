@@ -1,16 +1,8 @@
-import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
 import ourWork from "../data/ourWork.json";
 
 const OurWork = () => {
-  const getExcerpt = (text, wordLimit = 30) => {
-    const words = text.split(/\s+/);
-    return words.length > wordLimit
-      ? words.slice(0, wordLimit).join(" ") + "..."
-      : text;
-  };
-
   return (
     <>
       <Seo
@@ -31,10 +23,8 @@ const OurWork = () => {
 
           return (
             <div
-              key={post.slug}
-              className={`custom-post-container ${
-                isEven ? "even" : "odd"
-              }`}
+              key={post.id}
+              className={`custom-post-container ${isEven ? "even" : "odd"}`}
             >
               <div
                 className={`custom-post-inner ${
@@ -47,17 +37,10 @@ const OurWork = () => {
                     backgroundImage: `url(${post.image})`,
                   }}
                 />
+
                 <div className="custom-post-text">
                   <h2>{post.title}</h2>
-                  <p>{getExcerpt(post.excerpt || post.content)}</p>
-                  <Link
-                    to={`/our-work/${post.slug}`}
-                    className={
-                      isEven ? "secondary-button" : "primary-button"
-                    }
-                  >
-                    Read More...
-                  </Link>
+                  <p>{post.description}</p>
                 </div>
               </div>
             </div>

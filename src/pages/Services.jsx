@@ -1,44 +1,8 @@
-import { Link } from "react-router-dom";
 import services from "../data/services.json";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
 
 const Services = () => {
-
-  const ServicePostList = ({ posts }) => {
-    return posts.map((post, index) => {
-      const isEven = index % 2 === 1;
-
-      return (
-        <div
-          key={post.slug}
-          className={`custom-post-container ${isEven ? "even" : "odd"}`}
-        >
-          <div
-            className={`custom-post-inner ${isEven ? "reverse-layout" : ""}`}
-          >
-            <div
-              className="custom-post-image"
-              style={{
-                backgroundImage: `url(${post.image})`,
-              }}
-            />
-            <div className="custom-post-text">
-              <h2>{post.title}</h2>
-              <p>{post.excerpt}</p>
-              <Link
-                to={`/services/${post.slug}`}
-                className={isEven ? "secondary-button" : "primary-button"}
-              >
-                Learn More...
-              </Link>
-            </div>
-          </div>
-        </div>
-      );
-    });
-  };
-
   return (
     <>
       <Seo
@@ -54,7 +18,34 @@ const Services = () => {
       />
 
       <div className="about-posts-container">
-        <ServicePostList posts={services} />
+        {services.map((service, index) => {
+          const isEven = index % 2 === 1;
+
+          return (
+            <div
+              key={service.id}
+              className={`custom-post-container ${isEven ? "even" : "odd"}`}
+            >
+              <div
+                className={`custom-post-inner ${
+                  isEven ? "reverse-layout" : ""
+                }`}
+              >
+                <div
+                  className="custom-post-image"
+                  style={{
+                    backgroundImage: `url(${service.image})`,
+                  }}
+                />
+
+                <div className="custom-post-text">
+                  <h2>{service.title}</h2>
+                  <p>{service.description}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );

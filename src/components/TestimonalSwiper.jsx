@@ -1,8 +1,11 @@
 import { useRef } from "react";
-import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
+
+import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
+
+import { Navigation, Autoplay } from "swiper/modules";
 
 const TestimonialSwiper = ({ testimonials }) => {
   const swiperRef = useRef(null);

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
 import Toast from "../components/Toast";
@@ -7,54 +8,26 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [services, setServices] = useState([]);
-  const [jobSize, setJobSize] = useState([]);
-  const [jobDescription, setJobDescription] = useState("");
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    try {
-      // TEMP: simulate success
-      console.log({
-        name,
-        phone,
-        email,
-        services,
-        jobSize,
-        jobDescription,
-        message,
-      });
-
-      setSubmitted(true);
-      setError(false);
-
-      // Optional: reset form
-      setName("");
-      setPhone("");
-      setEmail("");
-      setMessage("");
-      setServices([]);
-      setJobSize([]);
-      setJobDescription("");
-    } catch (err) {
-      setError(true);
-      setSubmitted(false);
-    }
-  };
-
-  const handleCheckboxChange = (setter) => (event) => {
-    const value = event.target.value;
-    setter((prev) =>
-      prev.includes(value)
-        ? prev.filter((item) => item !== value)
-        : [...prev, value]
+  try {
+    await emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     );
-  };
+
+    setSubmitted(true);
+    setError(false);
+    e.target.reset();
+  } catch (err) {
+    console.error(err);
+    setError(true);
+    setSubmitted(false);
+  }
+};
 
   return (
     <>
@@ -76,13 +49,32 @@ const Contact = () => {
           <h2 className="h2-alt">Get in Touch</h2>
 
           <div className="form-container">
-            <form onSubmit={handleSubmit} className="custom-form">
-              {/* All your form fields stay exactly the same */}
-              {/* (I trimmed here for readability — keep yours as-is) */}
+            <form className="custom-form" onSubmit={handleSubmit}>
               
+              <label>
+                Full Name
+                <input type="text" name="from_name" required />
+              </label>
+
+              <label>
+                Email Address
+                <input type="email" name="from_email" required />
+              </label>
+
+              <label>
+                Subject
+                <input type="text" name="subject" />
+              </label>
+
+              <label>
+                Message
+                <textarea name="message" rows="5" required />
+              </label>
+
               <button type="submit" className="secondary-button">
                 Send Message
               </button>
+
             </form>
           </div>
         </div>
@@ -91,9 +83,9 @@ const Contact = () => {
       <Toast
         message={
           submitted
-            ? "Thank you for your message!"
+            ? "Your message has been sent! Thank you."
             : error
-            ? "Error submitting your message!"
+            ? "Something went wrong. Please try again."
             : ""
         }
         type={submitted ? "success" : "error"}

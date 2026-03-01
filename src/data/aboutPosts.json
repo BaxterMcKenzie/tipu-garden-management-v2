@@ -1,14 +1,26 @@
 [
   {
-    "slug": "our-story",
+    "id":1,
     "title": "Our Story",
     "content": "Tipu Garden Management was founded with a passion for transforming outdoor spaces into thriving gardens. We believe in quality workmanship, reliable service, and building lasting relationships with our clients.",
     "image": "/img/about/our-story.jpg"
   },
   {
-    "slug": "our-values",
+    "id":2,
     "title": "Our Values",
     "content": "We pride ourselves on professionalism, sustainability, and attention to detail in every project we undertake.",
+    "image": "/img/about/our-values.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Our Approach",
+    "description": "At Tipu Garden Management, we believe gardening is more than maintenance — it’s about creating outdoor spaces that feel alive, welcoming, and sustainable. We approach every project with care, attention to detail, and a commitment to quality workmanship.",
+    "image": "/img/about/our-values.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Why Choose Us",
+    "description": "As a family-run business, we pride ourselves on reliability, honest communication, and personalised service. With over a decade of experience, we bring both technical knowledge and genuine passion to every garden we work on.",
     "image": "/img/about/our-values.jpg"
   }
 ]

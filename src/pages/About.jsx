@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import aboutPosts from "../data/aboutPosts.json";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
@@ -11,7 +10,7 @@ const About = () => {
 
       return (
         <div
-          key={post.slug}
+          key={post.id}
           className={`custom-post-container ${isEven ? "even" : "odd"}`}
         >
           <div
@@ -23,15 +22,10 @@ const About = () => {
                 backgroundImage: `url(${post.image})`,
               }}
             />
+
             <div className="custom-post-text">
               <h2>{post.title}</h2>
-              <p>{post.excerpt}</p>
-              <Link
-                to={`/about/${post.slug}`}
-                className={isEven ? "secondary-button" : "primary-button"}
-              >
-                Read More...
-              </Link>
+              <p>{post.content || post.description}</p>
             </div>
           </div>
         </div>
@@ -52,27 +46,6 @@ const About = () => {
         image_url="/header-image/tree-path.jpg"
         blurb="Passionate about plants, dedicated to your garden—learn more about our story and what makes us different."
       />
-
-      {/* Static Story Section */}
-      <div className="main-container">
-        <div className="inner-container">
-          <div
-            className="image-container"
-            style={{
-              backgroundImage: `url('/img/teeps-mowing-cropped.jpg')`,
-              backgroundSize: "cover",
-              backgroundPosition: "top",
-            }}
-          />
-          <div className="text-container">
-            <h2>The Story of Tipu Garden Management</h2>
-            <p>
-              Tipu Gardens began in 2020 during the COVID-19 pandemic...
-              (keep your existing story text here)
-            </p>
-          </div>
-        </div>
-      </div>
 
       <div className="about-posts-container">
         <AboutPostList posts={aboutPosts} />
