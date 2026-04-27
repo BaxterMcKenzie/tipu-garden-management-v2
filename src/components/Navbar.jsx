@@ -53,7 +53,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <NavLink to="/ourWork" onClick={closeMenu} className={getNavClass}>
+            <NavLink to="/our-work" onClick={closeMenu} className={getNavClass}>
               <span className="text">Our Work</span>
             </NavLink>
           </li>

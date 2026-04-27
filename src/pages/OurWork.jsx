@@ -1,6 +1,7 @@
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
 import ourWork from "../data/ourWork.json";
+import { Link } from "react-router-dom";
 
 const OurWork = () => {
   return (
@@ -24,25 +25,32 @@ const OurWork = () => {
           return (
             <div
               key={post.id}
-              className={`custom-post-container ${isEven ? "even" : "odd"}`}
+              className={`custom-post-container ${
+                isEven ? "even bg-green" : "odd bg-white"
+              }`}
             >
-              <div
+              <Link
+                to={`/our-work/${post.slug}`}
                 className={`custom-post-inner ${
                   isEven ? "reverse-layout" : ""
                 }`}
               >
-                <div
-                  className="custom-post-image"
-                  style={{
-                    backgroundImage: `url(${post.image})`,
-                  }}
-                />
+                <div className="custom-post-image">
+                  <img
+                    src={post.images?.after?.[0]}
+                    alt={post.title}
+                  />
+                </div>
 
                 <div className="custom-post-text">
                   <h2>{post.title}</h2>
                   <p>{post.description}</p>
+
+                  <span className="primary-button">
+                    View Full Project
+                  </span>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}

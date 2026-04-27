@@ -1,14 +1,109 @@
 [
   {
-    "id": 1,
-    "title": "Complete Garden Transformation",
-    "description": "This full garden transformation involved clearing overgrown areas, reshaping garden beds, installing fresh mulch, and planting a selection of hardy native species suited to the local climate. The result was a clean, structured outdoor space that balances beauty with low-maintenance practicality. The client wanted a relaxing retreat that felt natural yet tidy—and the final result delivered exactly that.",
-    "image": "/img/our-work/garden-transformation.jpg"
+    "id": "full-front-yard",
+    "slug": "full-front-yard-makeover",
+    "title": "Full Front Yard Makeover",
+    "description": "Check out a few satisfying before and afters that show revealing edges, shaping and reclaiming a client's sophisticated and tranquil space.\n\nSend us an email if you would like to establish, maintain or design a garden layout at your kāinga (home).\nKia pai tō wiki koutou!",
+    "images": {
+      "before": [
+        "/img/our-work/full-front-yard-before.jpg",
+        "/img/our-work/full-front-yard-before-2.jpg"
+      ],
+      "after": [
+        "/img/our-work/full-front-yard-after.jpg",
+        "/img/our-work/full-front-yard-after-2.jpg"
+      ]
+    }
   },
   {
-    "id": 2,
-    "title": "Hedge Restoration Project",
-    "description": "This project focused on restoring a series of overgrown boundary hedges that had become uneven and difficult to manage. We carefully reshaped each hedge, removing dead growth and encouraging healthy regrowth. The transformation significantly improved the property's street appeal while restoring privacy and structure to the garden.",
-    "image": "/img/our-work/hedge-restoration.jpg"
+    "id": "grass-grow",
+    "slug": "grass-restoration",
+    "title": "Grass Restoration",
+    "description": "Want your grass to be lush and healthy?\n\nAutumn is grass growing season. I can help you stay on top of your lawns and keep them weed free and green.",
+    "images": {
+      "before": [
+        "/img/our-work/grass-grow-before.jpg"
+      ],
+      "after": [
+        "/img/our-work/grass-grow-after.jpg"
+      ]
+    }
+  },
+  {
+    "id": "garden-cleanup",
+    "slug": "garden-cleanup-restoration",
+    "title": "Garden Cleanup & Restoration",
+    "description": "Mahi has been busy and for that I am grateful.\n\nThis project involved a full garden clear out, tree removal, driveway cleanup, and redefining garden borders. These before and afters show the transformation across multiple areas of the property.\nKia pai tō wiki!",
+    "images": {
+      "before": [
+        "/img/our-work/small-path-before.jpg",
+        "/img/our-work/driveway-clear-before.jpg",
+        "/img/our-work/driveway-clear-before-2.jpg",
+        "/img/our-work/fence-garden-before.jpg"
+      ],
+      "after": [
+        "/img/our-work/small-path-after.jpg",
+        "/img/our-work/driveway-clear-after.jpg",
+        "/img/our-work/fence-garden-after.jpg"
+      ]
+    }
+  },
+  {
+    "id": "topiary",
+    "slug": "topiary-shaping",
+    "title": "Topiary Shaping",
+    "description": "",
+    "images": {
+      "before": [
+        "/img/our-work/topiary-before.jpg"
+      ],
+      "after": [
+        "/img/our-work/topiary-after.jpg"
+      ]
+    }
+  },
+  {
+    "id": "tree",
+    "slug": "tree-maintenance",
+    "title": "Tree Maintenance",
+    "description": "I have the privilege of maintaining this beautiful garden. I enjoy the concept, structure, and the opportunity to showcase attention to detail.",
+    "images": {
+      "before": [
+        "/img/our-work/tree-before.jpg"
+      ],
+      "after": [
+        "/img/our-work/tree-after.jpg"
+      ]
+    }
+  },
+  {
+    "id": "tropical-garden",
+    "slug": "tropical-garden-design",
+    "title": "Tropical Garden Design",
+    "description": "My client had a vision for a tropical feel in this space.\n\nStarting with clearing and planning, I developed a thoughtful layout. With over a year of regular maintenance and care, the space has really flourished.\nThese images show the transformation from planting through to a well-established garden.\nHave a vision? We can help bring it to life.",
+    "images": {
+      "before": [],
+      "after": [
+        "/img/our-work/tropical-garden-after.jpg",
+        "/img/our-work/tropical-garden-after-2.jpg",
+        "/img/our-work/tropical-garden-after-3.jpg",
+        "/img/our-work/tropical-garden-after-4.jpg",
+        "/img/our-work/tropical-garden-after-5.jpg"
+      ]
+    }
+  },
+  {
+    "id": "yard-clear",
+    "slug": "yard-clearing",
+    "title": "Yard Clearing",
+    "description": "Have a jungle growing in your yard?\n\nGet in touch. I can tidy things up, get your garden back under control, and provide regular maintenance.",
+    "images": {
+      "before": [
+        "/img/our-work/yard-clear-before.jpg"
+      ],
+      "after": [
+        "/img/our-work/yard-clear-after.jpg"
+      ]
+    }
   }
 ]
