@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&family=DotGothic16&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&family=DotGothic16&display=swap");
 
 * {
   box-sizing: border-box;
@@ -24,32 +24,31 @@
   --off-black: #333333; /* Dark grey */
   --primary-button-color: #ffd12e; /* Default primary button color */
   --secondary-button-color: #249836; /* Default secondary button color */
-  --font-primary: 'Montserrat', sans-serif;
+  --font-primary: "Montserrat", sans-serif;
 
-    /* Font Sizes */
-    --font-body: 1rem; /* Base size for body text */
-    --font-h3: 1.125rem; /* 18px */
-    --font-h2: 1.5rem; /* 24px */
-    --font-h1: 3.2rem; /* 36px */
-  
+  /* Font Sizes */
+  --font-body: 1rem; /* Base size for body text */
+  --font-h3: 1.125rem; /* 18px */
+  --font-h2: 1.5rem; /* 24px */
+  --font-h1: 3.2rem; /* 36px */
 }
 
 /* TEXT */
 
 h5 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -moz-font-weight: 600;
   -webkit-font-weight: 600;
   font-weight: 600;
@@ -58,7 +57,7 @@ h2 {
 }
 
 .h2-orange {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -moz-font-weight: 600;
   -webkit-font-weight: 600;
   font-weight: 600;
@@ -66,7 +65,7 @@ h2 {
 }
 
 .h2-alt {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--orange);
   font-size: 4rem;
   -moz-font-weight: 700;
@@ -127,7 +126,7 @@ p {
   height: 20px;
   width: 25px;
   transition: transform 0.3s ease;
-  z-index: 1001; 
+  z-index: 1001;
 }
 
 .bar {
@@ -153,7 +152,7 @@ p {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .nav-links li {
@@ -173,13 +172,13 @@ p {
 }
 
 .nav-links li a::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 3px;
   border-radius: 8px;
   background: var(--orange);
-  transition: width .5s;
+  transition: width 0.5s;
   span {
     color: var(--yellow);
   }
@@ -222,13 +221,13 @@ footer {
   -moz-font-weight: 500;
   -webkit-font-weight: 500;
   font-weight: 500;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: var(--cream);
   text-align: center;
 }
 
 .social-link {
-  padding: .5rem;
+  padding: 0.5rem;
   color: #ff9a2e;
   text-align: center;
   font-size: 1.5rem;
@@ -239,7 +238,7 @@ footer {
   -moz-font-weight: 500;
   -webkit-font-weight: 500;
   font-weight: 500;
-  font-size: .6rem;
+  font-size: 0.6rem;
   color: var(--cream);
   text-align: center;
 }
@@ -252,7 +251,7 @@ footer {
 }
 
 .footer-logo {
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .footer-logo:hover {
@@ -270,7 +269,7 @@ footer {
 
 .hero-blurb {
   font-family: var(--font-primary);
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--off-black);
 }
 
@@ -284,7 +283,7 @@ footer {
 .header-overlay {
   height: 450px;
   width: 400px;
-  background-color:#fffef2af;
+  background-color: #fffef2af;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -327,11 +326,13 @@ footer {
   -webkit-font-weight: 600;
   font-weight: 600;
   font-size: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: var(--primary-button-color);
   border: #333333 2px solid;
   margin-top: 30px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   text-decoration: none;
   text-align: center;
   display: flex;
@@ -348,7 +349,7 @@ footer {
   transform: scale(0.92);
 }
 
- a {
+a {
   text-decoration: none;
 }
 
@@ -362,11 +363,13 @@ footer {
   -webkit-font-weight: 600;
   font-weight: 600;
   font-size: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: var(--secondary-button-color);
   border: #fffef2 2px solid;
   margin-top: 30px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   text-decoration: none;
   text-align: center;
   display: flex;
@@ -386,6 +389,12 @@ footer {
 
 .main-container {
   background-color: var(--cream);
+  background-image: url("/img/paper-texture.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: multiply;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,6 +411,11 @@ footer {
 
 .main-container:nth-child(even) {
   background-color: var(--dark-green);
+  background-image: url("/img/paper-texture-invert.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: screen;
 }
 
 .inner-container {
@@ -417,8 +431,6 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
-
-
 
 .image-container {
   width: 50%;
@@ -442,7 +454,7 @@ footer {
 
 .about-posts-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .custom-post-container {
@@ -455,10 +467,20 @@ footer {
 
 .custom-post-container.odd {
   background-color: var(--cream);
+  background-image: url("/img/paper-texture.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: multiply;
 }
 
 .custom-post-container.even {
   background-color: var(--dark-green);
+  background-image: url("/img/paper-texture-invert.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: screen; /* or try overlay */
 }
 
 .custom-post-container.odd h2 {
@@ -573,22 +595,20 @@ footer {
   text-align: center;
 }
 
-
 /* HOME-PAGE-SERVICES-GRID */
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 50px; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
 
   .image-container {
     height: 260px;
     width: 260px;
-    border-radius: 8px; 
+    border-radius: 8px;
     background-color: #ccc;
     border: 3px solid #fffef2;
   }
-
 }
 
 .service-card {
@@ -599,7 +619,7 @@ footer {
 
   .secondary-button {
     max-width: 100%;
-}
+  }
 }
 
 /* Testimonal Swiper  */
@@ -607,68 +627,79 @@ footer {
 .main-container-testimonal {
   position: relative;
   background-color: var(--dark-green);
+  background-image: url("/img/paper-texture-invert.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: screen;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem 0rem;
 }
 
-
 .testimonial-swiper {
   margin-top: 2rem;
-  height: 100%; 
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   background-color: #10381c;
+  background-image: url("/img/paper-texture-invert.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: screen;
 
   .swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: 70%;
-  transform: translateY(-70%);
-  z-index: 10;
-  cursor: pointer;
-}
+  .swiper-button-next {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-70%);
+    z-index: 10;
+    cursor: pointer;
+  }
 
-.swiper-button-prev {
-  left: 80px; 
-}
+  .swiper-button-prev {
+    left: 80px;
+  }
 
-.swiper-button-next {
-  right: 80px;
-}
+  .swiper-button-next {
+    right: 80px;
+  }
 
-.swiper-button-prev::after {
-  font-size: 30px;
-}
+  .swiper-button-prev::after {
+    font-size: 30px;
+  }
 
-.swiper-button-next:after {
-  font-size: 30px;
-}
+  .swiper-button-next:after {
+    font-size: 30px;
+  }
 
-.secondary-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: var(--cream);
-  font-family: var(--font-primary);
-  -moz-font-weight: 300;
-  -webkit-font-weight: 300;
-  font-weight: 300;
-  font-size: 2px;
-  background-color: var(--green);
-  border: #fffef2 2px solid;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+  .secondary-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--cream);
+    font-family: var(--font-primary);
+    -moz-font-weight: 300;
+    -webkit-font-weight: 300;
+    font-weight: 300;
+    font-size: 2px;
+    background-color: var(--green);
+    border: #fffef2 2px solid;
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease;
+  }
 
-.secondary-button:hover {
-  background-color: var(--dark-green);
-}
+  .secondary-button:hover {
+    background-color: var(--dark-green);
+  }
 }
 
 .inner-container-vertical {
@@ -739,14 +770,13 @@ footer {
 }
 
 .testimonial-author {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   -moz-font-weight: bold;
   -webkit-font-weight: bold;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 
 /* Main Container Contact Form */
 
@@ -776,6 +806,76 @@ footer {
   }
 }
 
+/* Page */
+.project-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--cream);
+  background-image: url("/img/paper-texture.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: multiply;
+}
+
+/* Hero */
+.project-hero {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.project-hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-hero h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: white;
+}
+
+/* Description */
+.project-description {
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.project-description p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Sections */
+.project-section {
+  margin-bottom: 3rem;
+}
+
+.project-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Masonry Grid */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.masonry-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
 /* Form Container - General Form Styling */
 .form-container {
   background-color: #10381c;
@@ -783,15 +883,14 @@ footer {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   min-width: 40%;
-  margin: 2rem auto; 
-  color: var(--cream); 
+  margin: 2rem auto;
+  color: var(--cream);
   border: 3px solid #ffd12e;
 
   .secondary-button {
     max-width: 100%;
     padding: 2px;
   }
-
 }
 
 .form-container .custom-form label {
@@ -817,7 +916,7 @@ footer {
   margin-bottom: 20px;
   border: 2px solid #ffd12e;
   border-radius: 5px;
-  background-color: var(--cream); 
+  background-color: var(--cream);
   color: #10381c;
   font-size: 1rem;
   font-family: var(--font-primary);
@@ -831,13 +930,17 @@ footer {
 
 /* Contact Form Container - Specific Styles */
 .contact-form-container {
-  background-color: var(--cream); 
+  background-color: var(--cream);
+  background-image: url("/img/paper-texture.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: multiply;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 4rem;
-  
 }
 
 .contact-form-container .inner-container {
@@ -869,8 +972,20 @@ footer {
 .contact-form-container .checkbox-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
-  gap: 20px; 
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-call a {
+  color: var(--secondary-button-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.contact-call a:hover {
+  border-bottom: 2px solid var(--secondary-button-color);
 }
 
 .checkbox-column {
@@ -886,7 +1001,7 @@ footer {
   }
 
   label {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
 }
 
@@ -894,37 +1009,38 @@ footer {
 .contact-form-container .checkbox-section input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 20px; 
+  width: 20px;
   height: 20px;
   border: 2px solid orange;
-  border-radius: 50%; 
+  border-radius: 50%;
   background-color: #fffdd0;
   outline: none;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 /* Change the checkbox to orange when checked */
 .contact-form-container .checkbox-section input[type="checkbox"]:checked {
   background-color: var(--orange);
-  border-color: var(--orange); 
+  border-color: var(--orange);
 }
-
 
 /* Service Section */
 .contact-form-container .service-section,
 .contact-form-container .job-size-section {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
-  width: 48%; 
+  flex-direction: column;
+  align-items: flex-start;
+  width: 48%;
 }
 
 /* Section Heading */
 .contact-form-container .checkbox-section h3 {
   margin-bottom: 10px;
   font-size: 16px;
-  -moz-font-weight:bold;
+  -moz-font-weight: bold;
   -webkit-font-weight: bold;
   font-weight: bold;
 }
@@ -932,21 +1048,21 @@ footer {
 /* Checkbox Labels */
 .contact-form-container .checkbox-section label {
   display: flex;
-  align-items: center; 
+  align-items: center;
   margin-bottom: 8px;
-  width: 100%; 
+  width: 100%;
 }
 
 /* Checkbox Inputs */
 .contact-form-container .checkbox-section input[type="checkbox"] {
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 
 /* Toast */
 
 .toast {
   position: fixed;
-  top: -100px; 
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -956,8 +1072,10 @@ footer {
   border: var(--off-black) solid 3px;
   opacity: 0.9;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  animation: slideDown 0.5s forwards; 
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  animation: slideDown 0.5s forwards;
 }
 
 .toast.error {
@@ -978,11 +1096,11 @@ footer {
 
 @keyframes slideDown {
   0% {
-    top: -100px; 
+    top: -100px;
     opacity: 0;
   }
   100% {
-    top: 20px; 
+    top: 20px;
     opacity: 1;
   }
 }
@@ -1000,7 +1118,7 @@ footer {
     margin: 1rem 0rem;
     color: var(--orange);
   }
-  
+
   h4 {
     margin: 1rem 0rem;
     color: var(--cream);
@@ -1009,7 +1127,7 @@ footer {
   p {
     font-size: 1rem;
     color: var(--cream);
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   img {
@@ -1017,7 +1135,6 @@ footer {
     border: 3px solid #ff9a2e;
     width: 100%;
   }
-
 }
 
 .products li {
@@ -1038,7 +1155,7 @@ footer {
 
 /* Cart */
 
-.cart-item-actions{
+.cart-item-actions {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1052,7 +1169,6 @@ footer {
 .cart-buttons {
   display: flex;
   justify-content: center;
-
 
   .secondary-button {
     width: 40px;
@@ -1076,9 +1192,7 @@ footer {
     margin-left: 2px;
     font-size: 12px;
   }
-  
 }
-
 
 /* Loading Spinner */
 .loading-spinner {
@@ -1103,10 +1217,8 @@ footer {
   }
 }
 
-
 /* Media query for smaller screens */
 @media (max-width: 1299px) {
-
   .hero-h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
@@ -1142,7 +1254,7 @@ footer {
   .image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px; 
+    gap: 50px;
   }
 
   .custom-post-inner {
@@ -1159,14 +1271,12 @@ footer {
     padding: 0rem 1.5rem 0rem 1.5rem;
     font-size: 0.9rem;
   }
-  
 }
 
 @media (max-width: 1029px) {
   .menu-icon {
     display: flex;
   }
-  
 
   .nav-links {
     display: none;
@@ -1231,12 +1341,9 @@ footer {
   .custom-post-container {
     padding: 3rem;
   }
-
 }
 
-
 @media (max-width: 768px) {
-
   .products ul {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1246,7 +1353,7 @@ footer {
   }
 
   .h2-alt {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--orange);
     font-size: 3rem;
   }
@@ -1273,14 +1380,14 @@ footer {
   .image-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 50px; 
+    gap: 50px;
   }
-  
+
   .swiper-button-prev {
     position: absolute;
     left: -20px;
   }
-  
+
   .swiper-button-next {
     right: 10px;
   }
@@ -1328,7 +1435,6 @@ footer {
   .custom-post-container.even p {
     font-size: 1rem;
   }
-  
 }
 
 @media (max-width: 425px) {
@@ -1381,12 +1487,12 @@ footer {
   }
 
   .testimonial-swiper {
-      .swiper-button-next { 
-        right: 0px;
+    .swiper-button-next {
+      right: 0px;
     }
-    .swiper-button-prev { 
+    .swiper-button-prev {
       left: 0px;
-  }
+    }
   }
 
   .footer {
@@ -1398,18 +1504,18 @@ footer {
     -moz-font-weight: 500;
     -webkit-font-weight: 500;
     font-weight: 500;
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--cream);
     text-align: right;
   }
-  
+
   .social-link {
-    padding: .5rem;
+    padding: 0.5rem;
     color: #ff9a2e;
     text-align: right;
     font-size: 1.5rem;
   }
-  
+
   .fern {
     display: none;
   }

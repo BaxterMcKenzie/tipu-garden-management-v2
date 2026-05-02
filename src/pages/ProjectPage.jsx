@@ -9,18 +9,45 @@ const ProjectPage = () => {
   if (!project) return <p>Project not found</p>;
 
   return (
-    <div>
-      <h1>{project.title}</h1>
+    <div className="project-page">
 
-      <h3>Before</h3>
-      {project.images.before.map((img, i) => (
-        <img key={i} src={img} alt="" />
-      ))}
+      {/* Hero */}
+      <div className="project-hero">
+        <img src={project.images.after?.[0]} alt={project.title} />
+        <h1>{project.title}</h1>
+      </div>
 
-      <h3>After</h3>
-      {project.images.after.map((img, i) => (
-        <img key={i} src={img} alt="" />
-      ))}
+      {/* Description */}
+      {project.description && (
+        <div className="project-description">
+          {project.description.split("\n\n").map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
+      )}
+
+      {/* Before */}
+      {project.images.before.length > 0 && (
+        <div className="project-section">
+          <h2>Before</h2>
+          <div className="masonry-grid">
+            {project.images.before.map((img, i) => (
+              <img key={i} src={img} alt="" />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* After */}
+      <div className="project-section">
+        <h2>After</h2>
+        <div className="masonry-grid">
+          {project.images.after.map((img, i) => (
+            <img key={i} src={img} alt="" />
+          ))}
+        </div>
+      </div>
+
     </div>
   );
 };

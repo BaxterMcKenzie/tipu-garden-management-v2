@@ -39,7 +39,7 @@ const handleSubmit = async (e) => {
 
       <PageHeader
         title="Contact Us"
-        image_url="/header-image/contact.jpg"
+        image_url="/header-image/contact.webp"
         blurb="Have a question or want to get started with our services? We'd love to hear from you!"
         showButton={false}
       />
@@ -47,6 +47,17 @@ const handleSubmit = async (e) => {
       <div className="contact-form-container">
         <div className="inner-container">
           <h2 className="h2-alt">Get in Touch</h2>
+          <p>
+  Got a project in mind? Send us a message with a few details of your space so we can get a clear idea of what’s needed.
+</p>
+
+<p className="contact-call">
+  Or give us a call if you’d rather talk it through.
+</p>
+
+<a href="tel:0221753264" className="primary-button">
+  Call 022 175 3264
+</a>
 
           <div className="form-container">
             <form className="custom-form" onSubmit={handleSubmit}>
