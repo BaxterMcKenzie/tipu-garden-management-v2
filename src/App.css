@@ -811,13 +811,16 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+  .custom-style {
   background-color: var(--cream);
   background-image: url("/img/paper-texture.webp");
   background-repeat: repeat;
   background-size: 300px;
 
   background-blend-mode: multiply;
-}
+  }
 
 /* Hero */
 .project-hero {
@@ -1546,5 +1549,11 @@ a {
 
   .custom-style {
     min-width: 100%;
+      background-color: var(--cream);
+  background-image: url("/img/paper-texture.webp");
+  background-repeat: repeat;
+  background-size: 300px;
+
+  background-blend-mode: multiply;
   }
 }

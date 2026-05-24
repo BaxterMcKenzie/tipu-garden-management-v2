@@ -75,7 +75,7 @@ const Home = () => {
                   backgroundPosition: "center",
                 }}
               />
-              <Link to="/services/hedges-topiaries-services">
+              <Link to="our-work/topiary-shaping">
                 <button className="secondary-button">Hedge Services</button>
               </Link>
             </div>
@@ -89,7 +89,7 @@ const Home = () => {
                   backgroundPosition: "center",
                 }}
               />
-              <Link to="/services/lawn-care-services">
+              <Link to="our-work/grass-restoration">
                 <button className="secondary-button">Lawn Care</button>
               </Link>
             </div>
@@ -103,7 +103,7 @@ const Home = () => {
                   backgroundPosition: "center",
                 }}
               />
-              <Link to="/services/pest-control-services">
+              <Link to="our-work/garden-cleanup-restoration">
                 <button className="secondary-button">Pest Control</button>
               </Link>
             </div>
@@ -117,7 +117,7 @@ const Home = () => {
                   backgroundPosition: "center",
                 }}
               />
-              <Link to="/services/section-clearing-services">
+              <Link to="our-work/yard-clearing">
                 <button className="secondary-button">Section Clear</button>
               </Link>
             </div>
@@ -137,13 +137,31 @@ const Home = () => {
             }}
           />
           <div className="text-container">
-            <h2>Free Quote – Make Sure We’re Right for You!</h2>
-            <br />
-            <p>
-              We offer a no-obligation free quote tailored to your needs.
-              Whether it’s maintenance, landscaping, or a custom garden project,
-              we’ll work with you to make it happen.
-            </p>
+  <h2>Free Quote – Make Sure We’re Right for You!</h2>
+  <br />
+  <p>
+    We offer a no-obligation free quote tailored to your needs. Whether
+    it’s regular garden maintenance, landscaping, tidy-ups, or a custom
+    outdoor project, we’ll work with you to create a solution that suits
+    your space and budget.
+  </p>
+
+  <br />
+
+  <p>
+    We’re happy to stop by while you’re home for a chat about what you
+    need, how we can help, and the best approach for your property. We
+    believe in honest advice, clear communication, and pricing that feels
+    fair and realistic from the start.
+  </p>
+
+  <br />
+
+  <p>
+    No pressure, no complicated process, just friendly service and a
+    straightforward quote so you can feel confident you’re choosing the
+    right team for the job.
+  </p>
             <Link to="/contact">
               <button className="primary-button">Contact</button>
             </Link>
@@ -175,7 +193,7 @@ const Home = () => {
             <br />
             <p>
               Our main service area covers from Seatoun to Titahi Bay. If you're
-              just outside these boundaries, please get in touch — we’ll do our
+              just outside these boundaries, please get in touch. We’ll do our
               best to accommodate you.
             </p>
             <Link to="/contact">

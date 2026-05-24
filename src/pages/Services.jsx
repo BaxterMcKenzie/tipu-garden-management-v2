@@ -41,6 +41,11 @@ const Services = () => {
                 <div className="custom-post-text">
                   <h2>{service.title}</h2>
                   <p>{service.description}</p>
+                  <button
+  className={isEven ? "secondary-button" : "primary-button"}
+>
+  Get a Quote
+</button>
                 </div>
               </div>
             </div>
